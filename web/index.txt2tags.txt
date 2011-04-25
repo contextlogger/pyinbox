@@ -1,0 +1,39 @@
+pyinbox for Python for S60
+
+%%mtime(%c)
+
+%!includeconf: config.t2t
+%! Options : --toc --enum-title
+
+h1. Introduction
+
+The ``pyinbox`` extension is a renamed and slightly tweaked version of the ``inbox`` module of [Python for S60 http://www.forum.nokia.com/python]. The sole motivation for creating a modified version was to make it possible to access "Bluetooth" messages (i.e., Bluetooth OBEX pushed messages) in the phone Inbox, which at the time of writing is not possible with the ``inbox`` module as released by Nokia. The changes introduced by ``pyinbox`` are a bit of an ugly hack, but they serve their purpose.
+
+h1. Status
+
+The PyS60 ``inbox`` on which this software is based is used widely, but this variant is a different story. It has, however, been found to be stable for the purpose of accessing OBEX Bluetooth messages in the Inbox.
+
+h1. Examples
+
+The [programs used to test pyinbox ../test-programs] also serve as example programs. There is API documentation available for the original ``inbox`` module, but not for ``pyinbox``. Hopefully the example programs are sufficient for pointing out the API differences, but one can always resort to reading the source code.
+
+h1. License
+
+For the license under which the software is released, see the [license.txt ../doc/license.txt] file.
+
+h1. Download
+
+A [collection of release builds ../download/] is available. The ``sisx`` file without a version number is the latest release. You may or may not find the [changelog.txt changelog.txt] file useful in trying to determine what has changed between releases.
+
+A [darcs http://darcs.net/] repository of the [source code ..] (with change history) is also available, and can be retrieved with the ``get`` command of ``darcs``.
+
+h1. Dependencies
+
+The software should run on pretty much any S60 device, long as one installs the correct build variant, albeit there may be some differences in functionality depending on the variant. The software depends on the [Python for S60 http://www.forum.nokia.com/python/] runtime. Does not depend on non-public APIs or anything exotic.
+
+h1. Contributing
+
+Contributions are welcome. Send patches to the below email address. The ``send`` command of ``darcs`` may be used.
+
+------------------------------------------------
+Tero Hasu /// tero.hasu@hut.fi
