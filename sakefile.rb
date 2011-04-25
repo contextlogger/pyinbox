@@ -208,16 +208,6 @@ end
 # distribution files somewhere.
 try_load('local/releasing.rb')
 
-desc "Prepares web pages."
-task :web do
-  srcfiles = Dir['web/*.txt2tags.txt']
-  sh("darcs changes > web/changelog.txt")
-  for srcfile in srcfiles
-    htmlfile = srcfile.sub(/\.txt2tags\.txt$/, ".html")
-    sh("tools/txt2tags --target xhtml --infile %s --outfile %s --encoding utf-8 --verbose" % [srcfile, htmlfile])
-  end
-end
-
 dl_dir = $proj.download_dir
 dl_path = $proj.to_proj_rel(dl_dir).to_s
 
