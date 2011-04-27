@@ -10,4 +10,5 @@ download/
 local/
 web/*.css
 web/*.html
+doxyfile-*
 *-api/
